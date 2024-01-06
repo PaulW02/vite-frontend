@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import Header from './Header';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import AddNote from "./pages/AddNote";
+import GetPatient from "./pages/GetPatient";
+import MessageForm from "./pages/MessageForm";
+import MessageList from "./pages/MessageList";
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
+import PatientDetails from "./pages/PatientDetail";
+import Search from "./pages/Search";
+//import { ReactKeycloakProvider } from "@react-keycloak/web";
+//import keycloak from "./keycloak"
 
 function App() {
-  const [count, setCount] = useState(0)
+    return (
+        //<ReactKeycloakProvider authClient={keycloak}>
+        <BrowserRouter>
+            <Header/>
+            <Routes>
+                    <Route path="/Home" element={<Home />}/>
+                    <Route path="/Profile" element={<Profile />}/>
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/AddNote" element={<AddNote/> } />
+                    <Route path="/GetPatient" element={<GetPatient/>}/>
+                    <Route path="/MessageForm" element={<MessageForm/> } />
+                    <Route path="/Messages" element={<MessageList/> } />
+                    <Route path="/patient/:id/details" element={<PatientDetails/> } />
+                    <Route path="/search" element={<Search/> } />
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+            </Routes>
+        </BrowserRouter>
+        //</ReactKeycloakProvider>
+    );
 }
 
-export default App
+export default App;

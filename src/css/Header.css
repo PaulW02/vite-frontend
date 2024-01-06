@@ -1,0 +1,26 @@
+header {
+    background-color: #333; /* Bakgrundsfärg */
+    color: #fff; /* Textfärg */
+    padding: 10px; /* Inre utfyllnad */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px; /* Avstånd mellan länkarna */
+}
+
+nav a {
+    text-decoration: none; /* Ta bort understrykning från länkarna */
+    color: #fff; /* Textfärg för länkarna */
+    font-weight: bold; /* Fet text */
+}
+
+/* Hover-effekt när musen sveper över länken */
+nav a:hover {
+    color: #00b3b3; /* Ändra textfärgen vid hover */
+}

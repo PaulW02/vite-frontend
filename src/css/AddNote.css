@@ -1,0 +1,32 @@
+/* AddNote.css */
+
+/* Container styles */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Optional: Add hover effect to the button */
+.button-container button:hover {
+    background-color: #1976D2;
+}
+
+/* Optional: Add transition effect to the button */
+.button-container button {
+    transition: background-color 0.3s ease;
+}

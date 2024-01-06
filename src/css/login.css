@@ -1,0 +1,58 @@
+.signup-container, .login-container {
+    background-color: #fff; /* Vit bakgrundsfärg */
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    border: 2px solid #00b3b3; /* Blå kant */
+    border-radius: 5px;
+}
+
+h2 {
+    color: #000; /* Ändra textfärgen till svart */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    font-size: 14px;
+}
+
+.btn {
+    background-color: #00b3b3;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #009999;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    font-size: 14px;
+}

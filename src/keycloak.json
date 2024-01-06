@@ -1,0 +1,11 @@
+{
+  "realm": "Fullstack",
+  "auth-server-url": "https://vm.cloud.cbh.kth.se:2523",
+  "ssl-required": "external",
+  "resource": "fullstack-frontend",
+  "clientId": "fullstack-frontend",
+  "enable-cors" : true,
+  "cors-max-age" : 1000,
+  "cors-allowed-methods" : "POST, PUT, DELETE, GET, OPTIONS",
+  "confidential-port": 0
+}
