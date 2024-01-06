@@ -147,6 +147,7 @@ export const userService = {
     getToken,
     updateToken,
     getUsername,
+    getParsedToken,
     getSub,
     getFullName,
     getEmail,
