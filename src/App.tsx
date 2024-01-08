@@ -16,7 +16,6 @@ function App() {
     return (
         //<ReactKeycloakProvider authClient={keycloak}>
         <BrowserRouter>
-            <Header/>
             <Routes>
                     <Route path="/Home" element={<Home />}/>
                     <Route path="/Profile" element={<Profile />}/>
