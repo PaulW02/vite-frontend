@@ -15,7 +15,7 @@ import Search from "./pages/Search";
 function App() {
     return (
         //<ReactKeycloakProvider authClient={keycloak}>
-        <BrowserRouter>
+        <>
             <Header/>
             <Routes>
                     <Route path="/Home" element={<Home />}/>
@@ -30,7 +30,7 @@ function App() {
                     <Route path="/search" element={<Search/> } />
 
             </Routes>
-        </BrowserRouter>
+        </>
         //</ReactKeycloakProvider>
     );
 }
