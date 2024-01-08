@@ -5,15 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Header from './Header.tsx';
 import { userService } from './rest/UserService';
+import {BrowserRouter} from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 userService.initKeycloak(() => root.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <Header/>
     <App />
-  </React.StrictMode>
+  </BrowserRouter>
 ));
 
 // If you want to start measuring performance in your app, pass a function
