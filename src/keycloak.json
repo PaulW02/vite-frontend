@@ -1,6 +1,6 @@
 {
   "realm": "Fullstack",
-  "auth-server-url": "https://vm.cloud.cbh.kth.se:2523",
+  "auth-server-url": "https://lab-keycloak2.vm-app.cloud.cbh.kth.se/",
   "ssl-required": "external",
   "resource": "fullstack-frontend",
   "clientId": "fullstack-frontend",
