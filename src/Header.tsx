@@ -1,7 +1,7 @@
-import React, {Fragment, useEffect, useState} from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import React, {useEffect, useState} from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Disclosure } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { userService } from './rest/UserService';
 
 
@@ -78,7 +78,6 @@ function Header() {
         userService.doLogout();
     };
 
-    const isLoggedIn = userRole.length > 0;
     let userNavigationOptions = navigation.common;
     if (!userService.isLoggedIn()){
         console.log("IM not logged in")

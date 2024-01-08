@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import AddNote from "./pages/AddNote";
@@ -14,9 +14,6 @@ import Search from "./pages/Search";
 
 function App() {
     return (
-        //<ReactKeycloakProvider authClient={keycloak}>
-        <>
-            <Header/>
             <Routes>
                     <Route path="/Home" element={<Home />}/>
                     <Route path="/Profile" element={<Profile />}/>
@@ -30,8 +27,6 @@ function App() {
                     <Route path="/search" element={<Search/> } />
 
             </Routes>
-        </>
-        //</ReactKeycloakProvider>
     );
 }
 
