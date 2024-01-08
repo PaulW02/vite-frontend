@@ -1,7 +1,7 @@
 import {apiRequests as apiRequest, apiRequests} from "./ApiRequests";
 
 
-const serverUrl = "https://api-gateway.app.cloud.cbh.kth.se";
+const serverUrl = "https://message-microservice.app.cloud.cbh.kth.se";
 export const MessageService = {
     sendMessage,
     getMessagesByUser
