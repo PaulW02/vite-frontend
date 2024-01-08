@@ -21,6 +21,8 @@ function App() {
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/AddNote" element={<AddNote/> } />
                     <Route path="/GetPatient" element={<GetPatient/>}/>
+                    <Route path="/MessageForm" element={<MessageForm/> } />
+                    <Route path="/Messages" element={<MessageList/> } />
             </Routes>
     );
 }
