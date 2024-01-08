@@ -1,7 +1,7 @@
 import {apiRequests} from "./ApiRequests";
 import Keycloak from "keycloak-js";
 
-const serverUrl = "http://localhost:5005";
+const serverUrl = "https://api-gateway.app.cloud.cbh.kth.se";
 
 const _kc = new Keycloak("/keycloak.json");
 

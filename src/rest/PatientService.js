@@ -2,7 +2,7 @@ import {apiRequests as apiRequest, apiRequests} from "./ApiRequests";
 import { userService } from "../rest/UserService";
 
 
-const serverUrl = "http://localhost:5005";
+const serverUrl = "https://api-gateway.app.cloud.cbh.kth.se";
 export const PatientService = {
     searchPatient,
     getPatientInfo,

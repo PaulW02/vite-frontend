@@ -2,7 +2,7 @@ import {apiRequests as apiRequest, apiRequests} from "./ApiRequests";
 import {Error} from "@mui/icons-material";
 
 
-const serverUrl = "http://localhost:5005";
+const serverUrl = "https://api-gateway.app.cloud.cbh.kth.se";
 export const SearchService = {
     searchPatient,
     getAllPatients,

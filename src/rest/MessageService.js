@@ -1,7 +1,7 @@
 import {apiRequests as apiRequest, apiRequests} from "./ApiRequests";
 
 
-const serverUrl = "http://localhost:5005";
+const serverUrl = "https://api-gateway.app.cloud.cbh.kth.se";
 export const MessageService = {
     sendMessage,
     getMessagesByUser

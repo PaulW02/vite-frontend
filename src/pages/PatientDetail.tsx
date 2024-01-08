@@ -68,14 +68,14 @@ const PatientDetails = () => {
         formData.append('image', file);
 
         try {
-            await axios.post(`http://localhost:5005/image/upload/${encounterID}`, formData, {
+            await axios.post(`https://api-gateway.app.cloud.cbh.kth.se/image/upload/${encounterID}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
             });
 
             // Refresh images associated with the encounterID after upload
-            const response = await axios.get(`http://localhost:5005/image/images/${encounterID}`);
+            const response = await axios.get(`https://api-gateway.app.cloud.cbh.kth.se/image/images/${encounterID}`);
             // Assuming response.data is an array of images with imageData field
             setImages(response.data);
         } catch (error) {
@@ -84,7 +84,7 @@ const PatientDetails = () => {
     }
     const fetchImagesId = async (encounterID: number) => {
         try {
-            const response: AxiosResponse<ImageData[]> = await axios.get(`http://localhost:5005/image/images/${encounterID}`);
+            const response: AxiosResponse<ImageData[]> = await axios.get(`https://api-gateway.app.cloud.cbh.kth.se/image/images/${encounterID}`);
             setImages(response.data); // Assuming response.data is an array of images with imageData field
         } catch (error) {
             console.error('Error fetching images:', error);
@@ -93,7 +93,7 @@ const PatientDetails = () => {
 
     async function fetchImages() {
         try {
-            const response = await axios.get('http://localhost:5005/image/images');
+            const response = await axios.get('https://api-gateway.app.cloud.cbh.kth.se/image/images');
             setImages(response.data); // Assuming response.data is an array of images with imageData field
         } catch (error) {
             console.error(error);
@@ -139,7 +139,7 @@ const PatientDetails = () => {
                 const base64Data = newCanvas.toDataURL('image/jpeg').split(',')[1]; // Get merged base64 data
 
                 try {
-                    await axios.post(`http://localhost:5005/image/update-image/${images[selectedImageIndex].id}`, {
+                    await axios.post(`https://api-gateway.app.cloud.cbh.kth.se/image/update-image/${images[selectedImageIndex].id}`, {
                         image: base64Data,
                     });
                     fetchImagesId(encounterID)
