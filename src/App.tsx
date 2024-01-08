@@ -16,6 +16,11 @@ function App() {
     return (
             <Routes>
                     <Route path="/Home" element={<Home />}/>
+                    <Route path="/Profile" element={<Profile />}/>
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/AddNote" element={<AddNote/> } />
+                    <Route path="/GetPatient" element={<GetPatient/>}/>
             </Routes>
     );
 }
