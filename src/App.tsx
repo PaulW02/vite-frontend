@@ -14,7 +14,19 @@ import Search from "./pages/Search";
 
 function App() {
     return (
-        <div>TESST</div>
+            <Routes>
+                    <Route path="/Home" element={<Home />}/>
+                    <Route path="/Profile" element={<Profile />}/>
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/AddNote" element={<AddNote/> } />
+                    <Route path="/GetPatient" element={<GetPatient/>}/>
+                    <Route path="/MessageForm" element={<MessageForm/> } />
+                    <Route path="/Messages" element={<MessageList/> } />
+                    <Route path="/patient/:id/details" element={<PatientDetails/> } />
+                    <Route path="/search" element={<Search/> } />
+
+            </Routes>
     );
 }
 
